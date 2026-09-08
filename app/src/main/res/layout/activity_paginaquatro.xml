@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+
+    tools:context=".Perfil">
+
+
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/logoPerfil"
+        android:layout_width="143dp"
+        android:layout_height="66dp"
+
+        android:contentDescription="Logo"
+
+        app:srcCompat="@drawable/logo"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/tituloPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Meu perfil"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoPerfil"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp" />
+
+
+    <!-- FOTO DE PERFIL -->
+    <ImageView
+        android:id="@+id/fotoPerfil"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+
+        android:contentDescription="Foto de perfil"
+
+        app:srcCompat="@drawable/perfil"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloPerfil"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp" />
+
+
+    <!-- NOME -->
+    <TextView
+        android:id="@+id/nomePerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Emily"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toEndOf="@id/fotoPerfil"
+        app:layout_constraintTop_toTopOf="@id/fotoPerfil"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp" />
+
+
+    <!-- USUARIO -->
+    <TextView
+        android:id="@+id/usuarioPerfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@emily"
+        android:textColor="#898989"
+        android:textSize="13sp"
+
+        app:layout_constraintStart_toStartOf="@id/nomePerfil"
+        app:layout_constraintTop_toBottomOf="@id/nomePerfil"
+
+        android:layout_marginTop="4dp" />
+
+
+    <!-- LINHA -->
+    <View
+        android:id="@+id/linha"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+
+        android:background="#242424"
+
+        app:layout_constraintTop_toBottomOf="@id/fotoPerfil"
+
+        android:layout_marginTop="25dp" />
+
+
+    <!-- EDITAR PERFIL -->
+    <TextView
+        android:id="@+id/editarPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:text="✏️   Editar perfil                                      ›"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+
+        android:paddingStart="25dp"
+
+        app:layout_constraintTop_toBottomOf="@id/linha" />
+
+
+    <!-- PAÍS E LOCALIZAÇÃO -->
+    <TextView
+        android:id="@+id/paisLocalizacao"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+
+        android:text="🌎   País e localização                       ›\n       Brasil"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+
+        android:paddingStart="25dp"
+
+        app:layout_constraintTop_toBottomOf="@id/editarPerfil" />
+
+
+    <!-- NOTIFICAÇÕES -->
+    <TextView
+        android:id="@+id/notificacoes"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:text="🔔   Notificações                                      ›"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+
+        android:paddingStart="25dp"
+
+        app:layout_constraintTop_toBottomOf="@id/paisLocalizacao" />
+
+
+    <!-- CONFIGURAÇÕES -->
+    <TextView
+        android:id="@+id/configuracoes"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:text="⚙️   Configurações                                    ›"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+
+        android:paddingStart="25dp"
+
+        app:layout_constraintTop_toBottomOf="@id/notificacoes" />
+
+
+    <!-- PRIVACIDADE -->
+    <TextView
+        android:id="@+id/privacidade"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:text="🔒   Privacidade                                      ›"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+
+        android:paddingStart="25dp"
+
+        app:layout_constraintTop_toBottomOf="@id/configuracoes" />
+
+
+    <!-- SAIR DA CONTA -->
+
+
+    <!-- MENU INFERIOR -->
+    <TextView
+        android:id="@+id/sairConta"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        android:gravity="center_vertical"
+        android:paddingStart="25dp"
+        android:text="🚪   Sair da conta"
+        android:textColor="#FF1744"
+
+        android:textSize="15sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/privacidade"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:id="@+id/menuInferior"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <ImageView
+            android:id="@+id/casa"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:contentDescription="Início"
+            app:srcCompat="@drawable/casaa" />
+
+
+        <ImageView
+            android:id="@+id/bussola"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:contentDescription="Explorar"
+            app:srcCompat="@drawable/bussola" />
+
+
+        <ImageView
+            android:id="@+id/adicionar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:contentDescription="Adicionar"
+            app:srcCompat="@drawable/adicionar" />
+
+
+        <ImageView
+            android:id="@+id/salvos"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:contentDescription="Salvos"
+            app:srcCompat="@drawable/salvo" />
+
+
+        <ImageView
+            android:id="@+id/perfil"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:contentDescription="Perfil"
+            app:srcCompat="@drawable/perfil" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

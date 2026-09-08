@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+
+    tools:context=".PaginaExplorar">
+
+
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/logoExplorar"
+        android:layout_width="143dp"
+        android:layout_height="66dp"
+        android:contentDescription="Logo"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:srcCompat="@drawable/logo" />
+
+
+    <!-- BARRA DE PESQUISA -->
+    <ImageView
+        android:id="@+id/fundoPesquisa"
+        android:layout_width="401dp"
+        android:layout_height="60dp"
+        android:contentDescription="Barra de pesquisa"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoExplorar"
+
+        app:srcCompat="@drawable/barradepesquisa" />
+
+
+    <!-- CAMPO DE PESQUISA -->
+    <EditText
+        android:id="@+id/barraPesquisa"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+
+        android:background="@android:color/transparent"
+
+        android:hint="Pesquisar no Japão"
+        android:inputType="text"
+        android:singleLine="true"
+
+        android:paddingStart="38dp"
+
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D0C9C9"
+        android:textSize="14sp"
+
+        android:gravity="center_vertical"
+
+        app:layout_constraintStart_toStartOf="@id/fundoPesquisa"
+        app:layout_constraintEnd_toEndOf="@id/fundoPesquisa"
+        app:layout_constraintTop_toTopOf="@id/fundoPesquisa"
+        app:layout_constraintBottom_toBottomOf="@id/fundoPesquisa" />
+
+
+    <!-- LUPA -->
+    <ImageView
+        android:id="@+id/lupa"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+
+        android:contentDescription="Pesquisar"
+
+        app:layout_constraintStart_toStartOf="@id/fundoPesquisa"
+        app:layout_constraintTop_toTopOf="@id/fundoPesquisa"
+        app:layout_constraintBottom_toBottomOf="@id/fundoPesquisa"
+
+        android:layout_marginStart="18dp"
+
+        app:srcCompat="@drawable/pesquisa" />
+
+
+    <!-- PAÍS -->
+    <TextView
+        android:id="@+id/pais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="🇯🇵  Japão"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fundoPesquisa"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="18dp" />
+
+
+    <!-- DESCRIÇÃO -->
+    <TextView
+        android:id="@+id/descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Explore vídeos, imagens e lugares do país"
+        android:textColor="#898989"
+        android:textSize="12sp"
+
+        app:layout_constraintStart_toStartOf="@id/pais"
+        app:layout_constraintTop_toBottomOf="@id/pais"
+
+        android:layout_marginTop="4dp" />
+
+
+    <!-- MAPA -->
+    <fragment
+        android:id="@+id/mapa"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/descricao"
+        app:layout_constraintBottom_toTopOf="@id/tituloLugares"
+
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp" />
+
+
+    <!-- BOTÃO GPS -->
+    <TextView
+        android:id="@+id/botaoLocalizacao"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:background="#242424"
+        android:gravity="center"
+
+        android:text="⌖"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+
+        app:layout_constraintEnd_toEndOf="@id/mapa"
+        app:layout_constraintTop_toTopOf="@id/mapa"
+
+        android:layout_margin="12dp" />
+
+
+    <!-- TÍTULO DOS LUGARES -->
+    <TextView
+        android:id="@+id/tituloLugares"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Lugares em destaque"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lugarTokyo"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="4dp" />
+
+
+    <!-- TOKYO -->
+    <TextView
+        android:id="@+id/lugarTokyo"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+
+        android:text="📍 Tokyo                         Ver vídeos →"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:gravity="center_vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lugarKyoto"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp" />
+
+
+    <!-- KYOTO -->
+    <TextView
+        android:id="@+id/lugarKyoto"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+
+        android:text="📍 Kyoto                         Ver vídeos →"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:gravity="center_vertical"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/menuInferior"
+
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="5dp" />
+
+
+    <!-- MENU INFERIOR -->
+    <LinearLayout
+        android:id="@+id/menuInferior"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:orientation="horizontal"
+        android:gravity="center"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <!-- INÍCIO -->
+        <ImageView
+            android:id="@+id/casa"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+
+            android:contentDescription="Início"
+
+            app:srcCompat="@drawable/casaa" />
+
+
+        <!-- EXPLORAR -->
+        <ImageView
+            android:id="@+id/explorar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+
+            android:contentDescription="Explorar"
+
+            app:srcCompat="@drawable/bussola" />
+
+
+        <!-- ADICIONAR -->
+        <ImageView
+            android:id="@+id/adicionar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+
+            android:contentDescription="Adicionar"
+
+            app:srcCompat="@drawable/adicionar" />
+
+
+        <!-- SALVOS -->
+        <ImageView
+            android:id="@+id/salvos"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+
+            android:contentDescription="Salvos"
+
+            app:srcCompat="@drawable/salvo" />
+
+
+        <!-- PERFIL -->
+        <ImageView
+            android:id="@+id/perfil"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+
+            android:contentDescription="Perfil"
+
+            app:srcCompat="@drawable/perfil" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

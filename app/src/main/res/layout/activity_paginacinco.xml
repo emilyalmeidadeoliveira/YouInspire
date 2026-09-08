@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+
+    tools:context=".EscolherPais">
+
+
+    <!-- LOGO -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="143dp"
+        android:layout_height="66dp"
+        android:contentDescription="Logo"
+
+        app:srcCompat="@drawable/logo"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- TÍTULO -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="🌎 Escolha seu país"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp" />
+
+
+    <!-- SUBTÍTULO -->
+    <TextView
+        android:id="@+id/subtitulo"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+
+        android:text="Escolha um país para descobrir vídeos, imagens, lugares e inspirações relacionadas a ele."
+        android:textColor="#898989"
+        android:textSize="14sp"
+
+        app:layout_constraintStart_toStartOf="@id/titulo"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+
+        android:layout_marginTop="10dp" />
+
+
+    <!-- BRASIL -->
+    <Button
+        android:id="@+id/brasil"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+
+        android:text="🇧🇷   Brasil"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="start|center_vertical"
+
+        android:backgroundTint="#242424"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtitulo"
+
+        android:layout_marginTop="30dp" />
+
+
+    <!-- JAPÃO -->
+    <Button
+        android:id="@+id/japao"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+
+        android:text="🇯🇵   Japão"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="start|center_vertical"
+
+        android:backgroundTint="#242424"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brasil"
+
+        android:layout_marginTop="10dp" />
+
+
+    <!-- FRANÇA -->
+    <Button
+        android:id="@+id/franca"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+
+        android:text="🇫🇷   França"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="start|center_vertical"
+
+        android:backgroundTint="#242424"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/japao"
+
+        android:layout_marginTop="10dp" />
+
+
+    <!-- ITÁLIA -->
+    <Button
+        android:id="@+id/italia"
+        android:layout_width="330dp"
+        android:layout_height="55dp"
+
+        android:text="🇮🇹   Itália"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:gravity="start|center_vertical"
+
+        android:backgroundTint="#242424"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/franca"
+
+        android:layout_marginTop="10dp" />
+
+
+    <!-- CONTINUAR -->
+    <Button
+        android:id="@+id/continuar"
+        android:layout_width="250dp"
+        android:layout_height="55dp"
+
+        android:text="CONTINUAR  →"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        android:backgroundTint="#FF1744"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_marginBottom="40dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
